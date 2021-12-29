@@ -220,3 +220,8 @@ nav li:nth-child(7) span:first-child {
   color: #00ab33;
   font-size: 16px;
 }
+
+main {
+  display: inline-block;
+  width: 100%;
+}
