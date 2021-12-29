@@ -33,6 +33,22 @@ body {
   width: 1080px;
 }
 
+#header-top {
+  float: right;
+}
+
+#header-search {
+  clear: both;
+}
+
+#header-top span {
+  color: #888888;
+  letter-spacing: -1px; /* 자간 */
+  font-size: 11px;
+  line-height: 22px; /* 글자의 높이 고정 (font-size에 상관없이) */
+  /* line-height 값이 너무 작으면 글자가 겹친다 */
+}
+
 div#header-search a {
   text-decoration: none;
 }
