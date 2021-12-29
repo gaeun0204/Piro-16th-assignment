@@ -8,13 +8,25 @@
 }
 
 div#header-center {
-  margin: 0 auto;
+  margin: 0 auto; /* 위아래, 왼쪽오른쪽 */
   width: 1080px;
 }
 
+div#header-search a {
+  text-decoration: none;
+}
+
 div#header-search h1 {
-  width: 280px;
+  width: 198px;
+  height: 48px;
   display: inline-block;
+  background-image: url(./sp_search.png);
+  background-position: -4px -4px; /* 왼쪽(-) 위쪽(-)으로 이동 */
+  background-repeat: no-repeat;
+}
+
+div#header-search h1 span {
+  display: none;
 }
 
 div#header-search h2 {
@@ -22,6 +34,10 @@ div#header-search h2 {
 }
 
 div#header-search fieldset {
-  width: 520px;
+  margin-left: 20px;
+  padding: 12px 0px 12px 10px; /*위 오른쪽 아래 왼쪽*/
+  width: 521px;
+  height: 49px;
   display: inline-block;
+  border: 2px solid #03cf5d;
 }
