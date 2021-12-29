@@ -6,17 +6,7 @@ html,
 body {
   margin: 0; /*브라우저가 기본적으로 설정하는 margin과 padding 제거 */
   padding: 0;
-}
-
-#fixed {
-  position: fixed; /* 컨테이닝 블럭: body? */
-  top: 50px;
-  right: 50px;
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-radius: 50px;
+  font-family: Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
 .blind {
@@ -28,17 +18,27 @@ body {
   height: 1px;
 }
 
+.relative {
+  position: relative;
+}
+
 .center-align {
   margin: 0 auto; /* 위아래, 왼쪽오른쪽 */
   width: 1080px;
 }
 
+header {
+  height: 170px;
+}
+
 #header-top {
   float: right;
+  margin-top: 8px;
 }
 
 #header-search {
   clear: both;
+  padding-top: 20px;
 }
 
 #header-top span {
@@ -62,7 +62,8 @@ div#header-search h1 {
   background-repeat: no-repeat;
   vertical-align: middle;
   position: relative; /* NAVER 로고(링크) 배치*/
-  top: -6px; /* NAVER 로고(링크) 배치*/
+  top: -5px; /* NAVER 로고(링크) 배치*/
+  left: 1px;
 }
 
 div#header-search h1 span {
@@ -116,9 +117,16 @@ div#header-search fieldset button {
   margin: 14px; /* 포지션을 배우면 margin으로 채워서 맞출필요 X */
 }
 
+nav {
+  height: 46px;
+  border-top: 1px solid #f1f3f6;
+  border-bottom: 1px solid #d1d8e4;
+}
+
 nav ul {
+  display: inline-block;
   margin: 0; /* 브라우저에서 설정한 margin 제거 */
-  padding: 0;
+  padding: 16px 0 0 4px;
   list-style: none;
 }
 
@@ -129,7 +137,7 @@ nav li {
 nav li:first-child span:first-child {
   width: 25px;
   background-position: 0 -285px;
-  margin-left: 0;
+  margin-left: 10px;
 }
 
 nav li span:first-child {
@@ -164,4 +172,24 @@ nav li:nth-child(5) span:first-child {
 nav li:nth-child(6) span:first-child {
   width: 25px;
   background-position: -70px -285px;
+}
+
+.nav-divider {
+  display: inline-block;
+  margin: 18px 16px 0;
+  width: 1px;
+  height: 14px;
+  background: #ebeef3;
+}
+
+#search-ranking {
+  position: absolute;
+  top: 16px;
+  right: 100px;
+}
+
+#rank-number {
+  margin-top: -9px;
+  color: #00ab33;
+  font-size: 16px;
 }
