@@ -62,11 +62,11 @@ header {
   padding-top: 45px;
 }
 
-div#header-search a {
+#header-search a {
   text-decoration: none;
 }
 
-div#header-search h1 {
+#header-search h1 {
   width: 198px;
   height: 48px;
   display: inline-block;
@@ -79,15 +79,15 @@ div#header-search h1 {
   left: 1px;
 }
 
-div#header-search h1 span {
+#header-search h1 span {
   display: none;
 }
 
-div#header-search h2 {
+#header-search h2 {
   display: none;
 }
 
-div#header-search fieldset {
+#header-search fieldset {
   margin-left: 20px;
   padding: 12px 0 12px 10px; /*위 오른쪽 아래 왼쪽*/
   width: 521px;
@@ -98,7 +98,7 @@ div#header-search fieldset {
   position: relative; /*position 속성값이 absolute인 button을 fieldset 기준으로 배치하기 위해 설정*/
 }
 
-div#header-search fieldset input {
+#header-search fieldset input {
   border: none;
   padding: 0; /*4방향 모두*/
   outline: none;
@@ -108,7 +108,7 @@ div#header-search fieldset input {
   /* input 태그는 기본적으로 inline-block이라서 가로세로 설정 가능 */
 }
 
-div#header-search fieldset button {
+#header-search fieldset button {
   width: 49px;
   height: 49px;
   border: none;
@@ -316,6 +316,7 @@ main {
 }
 
 #main-newsstand ul {
+  display: inline-block;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -323,7 +324,7 @@ main {
 
 #main-newsstand li {
   float: left;
-  width: 123px;
+  width: calc(100% / 6);
   height: 67px;
   border-right: 1px solid #f1f3f6;
   border-bottom: 1px solid #f1f3f6;
