@@ -237,6 +237,8 @@ main {
   width: 740px;
   height: 120px;
   background: #555;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-login {
@@ -245,6 +247,7 @@ main {
   height: 120px;
   vertical-align: top;
   background-color: white;
+  margin-bottom: 8px;
 }
 
 #main-ytn {
@@ -252,6 +255,8 @@ main {
   width: 740px;
   height: 46px;
   background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-newsstand {
@@ -259,6 +264,8 @@ main {
   width: 740px;
   height: 246px;
   background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-weather {
@@ -266,6 +273,7 @@ main {
   width: 332px;
   height: 142px;
   background-color: white;
+  margin-bottom: 8px;
 }
 
 #main-second-ad {
@@ -273,6 +281,7 @@ main {
   width: 332px;
   height: 150px;
   background: #555;
+  margin-bottom: 8px;
 }
 
 #main-category {
