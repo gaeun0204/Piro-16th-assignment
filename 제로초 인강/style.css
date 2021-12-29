@@ -48,7 +48,7 @@ div#header-search fieldset {
   display: inline-block;
   border: 2px solid #03cf5d; /*굵기 스타일 색(hex 표기)*/
   vertical-align: middle;
-  position: relative;
+  position: relative; /*position 속성값이 absolute인 button을 fieldset 기준으로 배치하기 위해 설정*/
 }
 
 div#header-search fieldset input {
@@ -67,6 +67,7 @@ div#header-search fieldset button {
   border: none;
   padding: 0;
   background: #03cf5d;
+  /* position 속성값이 absolute인 button을 fieldset을 기준으로 붙이고 싶다면 fieldset의 position을 (기본값 static이 아닌) relative로 바꿔준다. 그러면 button의 컨테이닝 블록이 fieldset으로 변경됨 */
   position: absolute;
   right: -2px;
   top: -2px;
