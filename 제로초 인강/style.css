@@ -169,17 +169,17 @@ nav ul {
   list-style: none;
 }
 
-nav li {
+#nav-menu li {
   display: inline-block; /* 가로로 나란히 나열하기 위해 */
 }
 
-nav li:first-child span:first-child {
+#nav-menu li:first-child span:first-child {
   width: 25px;
   background-position: 0 -285px;
   margin-left: 10px;
 }
 
-nav li span:first-child {
+#nav-menu li span:first-child {
   /* 3개 정도 써본 후에, 공통되는 부분 찾아서 묶음 */
   height: 16px;
   display: inline-block;
@@ -188,37 +188,37 @@ nav li span:first-child {
   margin-left: 10px;
 }
 
-nav li:nth-child(2) span:first-child {
+#nav-menu li:nth-child(2) span:first-child {
   width: 27px;
   background-position: -279px -52px;
 }
 
-nav li:nth-child(3) span:first-child {
+#nav-menu li:nth-child(3) span:first-child {
   width: 40px;
   background-position: -100px -182px;
 }
 
-nav li:nth-child(4) span:first-child {
+#nav-menu li:nth-child(4) span:first-child {
   width: 40px;
   background-position: -101px -156px;
 }
 
-nav li:nth-child(5) span:first-child {
+#nav-menu li:nth-child(5) span:first-child {
   width: 26px;
   background-position: -279px -156px;
 }
 
-nav li:nth-child(6) span:first-child {
+#nav-menu li:nth-child(6) span:first-child {
   width: 25px;
   background-position: -70px -285px;
 }
 
-nav li:nth-child(7) span:first-child {
+#nav-menu li:nth-child(7) span:first-child {
   width: 35px;
   background-position: -125px -130px;
 }
 
-nav li.more:first-child span:first-child {
+#nav-menu li.more:first-child span:first-child {
   width: 55px;
   background-position: 0 -104px;
 }
@@ -233,8 +233,28 @@ nav li.more:first-child span:first-child {
 
 #search-ranking {
   position: absolute;
-  top: 16px;
-  right: 100px;
+  top: 14px;
+  right: 0;
+  width: 198px;
+  height: 20px;
+}
+
+#search-ranking:hover ul {
+  display: inline-block;
+}
+
+#search-ranking ul {
+  display: none;
+  list-style: none;
+  padding: 17px;
+  margin: 0;
+  width: 332px;
+  height: 334px;
+  border: 1px solid #aaa;
+  background: white;
+  position: absolute;
+  top: -15px;
+  right: 0px;
 }
 
 #rank-number {
