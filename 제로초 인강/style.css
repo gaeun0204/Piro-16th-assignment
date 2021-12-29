@@ -9,6 +9,19 @@ body {
   font-family: Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .blind {
   position: absolute;
   overflow: hidden;
@@ -36,17 +49,17 @@ header {
   margin-top: 8px;
 }
 
-#header-search {
-  clear: both;
-  padding-top: 20px;
-}
-
 #header-top span {
   color: #888888;
   letter-spacing: -1px; /* 자간 */
   font-size: 11px;
   line-height: 22px; /* 글자의 높이 고정 (font-size에 상관없이) */
   /* line-height 값이 너무 작으면 글자가 겹친다 */
+}
+
+#header-search {
+  clear: both;
+  padding-top: 45px;
 }
 
 div#header-search a {
@@ -168,7 +181,7 @@ nav li span:first-child {
   display: inline-block;
   background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
   background-repeat: no-repeat;
-  margin-left: 14px;
+  margin-left: 10px;
 }
 
 nav li:nth-child(2) span:first-child {
@@ -201,6 +214,11 @@ nav li:nth-child(7) span:first-child {
   background-position: -125px -130px;
 }
 
+nav li.more:first-child span:first-child {
+  width: 55px;
+  background-position: 0 -104px;
+}
+
 .nav-divider {
   display: inline-block;
   margin: 18px 16px 0;
@@ -221,6 +239,11 @@ nav li:nth-child(7) span:first-child {
   font-size: 16px;
 }
 
+#rank-title {
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
 main {
   background-color: #f2f4f7;
   display: inline-block;
@@ -232,8 +255,13 @@ main {
   width: 1100px;
 }
 
-#main-ad {
+#main-first-block {
   display: inline-block;
+  width: 100%;
+}
+
+#main-ad {
+  float: left;
   width: 740px;
   height: 120px;
   background: #555;
@@ -242,12 +270,21 @@ main {
 }
 
 #main-login {
-  display: inline-block;
+  float: left;
   width: 332px;
   height: 120px;
   vertical-align: top;
   background-color: white;
   margin-bottom: 8px;
+}
+
+#main-second-block .inline-block:first-child {
+  width: 740px;
+}
+
+#main-second-block .inline-block:last-child {
+  width: 332px;
+  vertical-align: top;
 }
 
 #main-ytn {
@@ -259,6 +296,11 @@ main {
   margin-bottom: 8px;
 }
 
+#main-ytn h3,
+#main-ytn ol {
+  display: inline-block;
+}
+
 #main-newsstand {
   display: inline-block;
   width: 740px;
@@ -266,6 +308,32 @@ main {
   background-color: white;
   margin-right: 8px;
   margin-bottom: 8px;
+}
+
+#main-newsstand h3 {
+  height: 45px;
+  border-bottom: 1px solid #ebeef3;
+}
+
+#main-newsstand ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-newsstand li {
+  float: left;
+  width: 123px;
+  height: 67px;
+  border-right: 1px solid #f1f3f6;
+  border-bottom: 1px solid #f1f3f6;
+  text-align: center;
+}
+
+#main-newsstand li img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #main-weather {
@@ -285,29 +353,39 @@ main {
 }
 
 #main-category {
-  display: inline-block;
+  float: left;
   width: 740px;
   height: 837px;
   background: white;
+  margin-bottom: 8px;
+  margin-right: 8px;
 }
 
 #main-shopping {
-  display: inline-block;
+  float: left;
   width: 332px;
   height: 837px;
   background: white;
+  margin-bottom: 8px;
+}
+
+#main-third-block,
+#main-fourth-block {
+  display: inline-block;
+  width: 100%;
 }
 
 #main-event {
-  display: inline-block;
+  float: left;
   width: 740px;
   height: 130px;
   background: white;
   vertical-align: top;
+  margin-right: 8px;
 }
 
 #main-third-ad {
-  display: inline-block;
+  float: left;
   width: 332px;
   height: 130px;
   background: #555;
