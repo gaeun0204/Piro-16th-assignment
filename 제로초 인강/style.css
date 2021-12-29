@@ -28,6 +28,8 @@ div#header-search h1 {
   background-position: -4px -4px; /* 이미지를 왼쪽(-) 위쪽(-)으로 이동 */
   background-repeat: no-repeat;
   vertical-align: middle;
+  position: relative; /* NAVER 로고(링크) 배치*/
+  top: -6px; /* NAVER 로고(링크) 배치*/
 }
 
 div#header-search h1 span {
@@ -46,12 +48,17 @@ div#header-search fieldset {
   display: inline-block;
   border: 2px solid #03cf5d; /*굵기 스타일 색(hex 표기)*/
   vertical-align: middle;
+  position: relative;
 }
 
 div#header-search fieldset input {
   border: none;
   padding: 0; /*4방향 모두*/
   outline: none;
+  vertical-align: top;
+  width: 405px;
+  height: 23px;
+  /* input 태그는 기본적으로 inline-block이라서 가로세로 설정 가능 */
 }
 
 div#header-search fieldset button {
@@ -60,6 +67,10 @@ div#header-search fieldset button {
   border: none;
   padding: 0;
   background: #03cf5d;
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  /* 붙이고 싶은 곳에 position: relative; 적용하기 */
 }
 
 #search-image {
