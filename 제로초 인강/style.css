@@ -28,7 +28,7 @@ body {
   height: 1px;
 }
 
-div#header-center {
+.center-align {
   margin: 0 auto; /* 위아래, 왼쪽오른쪽 */
   width: 1080px;
 }
@@ -98,4 +98,37 @@ div#header-search fieldset button {
   height: 21px;
   display: inline-block;
   margin: 14px; /* 포지션을 배우면 margin으로 채워서 맞출필요 X */
+}
+
+nav ul {
+  margin: 0; /* 브라우저에서 설정한 margin 제거 */
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block; /* 가로로 나란히 나열하기 위해 */
+}
+
+nav li span:first-child {
+  /* 3개 정도 써본 후에, 공통되는 부분 찾아서 묶음 */
+  height: 16px;
+  display: inline-block;
+  background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+  background-repeat: no-repeat;
+}
+
+nav li:first-child span:first-child {
+  width: 25px;
+  background-position: 0 -285px;
+}
+
+nav li:nth-child(2) span:first-child {
+  width: 27px;
+  background-position: -279px -52px;
+}
+
+nav li:nth-child(3) span:first-child {
+  width: 40px;
+  background-position: -100px -182px;
 }
