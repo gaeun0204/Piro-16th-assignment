@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .blind {
   position: absolute;
   overflow: hidden;
@@ -23,6 +27,7 @@ div#header-search h1 {
   background-image: url(./sp_search.png);
   background-position: -4px -4px; /* 왼쪽(-) 위쪽(-)으로 이동 */
   background-repeat: no-repeat;
+  vertical-align: middle;
 }
 
 div#header-search h1 span {
@@ -35,9 +40,16 @@ div#header-search h2 {
 
 div#header-search fieldset {
   margin-left: 20px;
-  padding: 12px 0px 12px 10px; /*위 오른쪽 아래 왼쪽*/
+  padding: 12px 0 12px 10px; /*위 오른쪽 아래 왼쪽*/
   width: 521px;
   height: 49px;
   display: inline-block;
-  border: 2px solid #03cf5d;
+  border: 2px solid #03cf5d; /*굵기 스타일 색(hex 표기)*/
+  vertical-align: middle;
+}
+
+div#header-search fieldset input {
+  border: none;
+  padding: 0; /*4방향 모두*/
+  outline: none;
 }
