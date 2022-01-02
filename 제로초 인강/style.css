@@ -504,6 +504,9 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 45px;
 }
 
 #subject-list li {
