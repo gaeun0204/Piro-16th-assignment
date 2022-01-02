@@ -1,0 +1,145 @@
+@import "./reset.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: rgb(34, 32, 32);
+}
+
+.blue {
+  color: rgb(34, 149, 202);
+}
+
+.radius {
+  border-radius: 6px;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#nav-left {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  margin-top: 25px;
+  margin-left: 0;
+}
+
+#logo-image {
+  width: 58px;
+  height: 48px;
+  background-image: url(./github_logo.png);
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+#nav-menu {
+  display: flex;
+  padding-left: 20px;
+}
+
+#nav-right {
+  padding-top: 27px;
+}
+
+#nav-right input {
+  height: 35px;
+  background-color: gray;
+  color: white;
+}
+
+#nav-right input::placeholder {
+  color: white;
+  padding: 6px;
+}
+
+#nav-menu span,
+#nav-right a {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#main-left,
+#main-right {
+  width: 40%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main-left span {
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+form {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px 30px;
+
+  position: relative;
+}
+
+label input {
+  width: 100%;
+  height: 45px;
+  padding: 0;
+  margin: 14px 0;
+  border-width: 2px;
+  border-color: lightsteelblue;
+}
+
+label input:focus {
+  background: lightblue;
+}
+
+label span {
+  font-size: 20px;
+  font-weight: 550;
+}
+
+p#form-btm {
+  position: absolute;
+  bottom: 5%;
+}
+
+#form-signup {
+  background-color: limegreen;
+  color: white;
+  height: 70px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#footer {
+  width: 100%;
+  height: 150px;
+  background: white;
+  position: relative;
+}
+
+#footer img {
+  position: absolute;
+  height: 100%;
+  width: 37%;
+  left: 47%;
+}
