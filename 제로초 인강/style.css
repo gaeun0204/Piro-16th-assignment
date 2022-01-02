@@ -332,6 +332,7 @@ main {
   color: #888;
   font-size: 12px;
   line-height: 14px;
+  display: block;
 }
 
 #main-login .login-image {
@@ -367,6 +368,16 @@ main {
 
 #main-second-block .float-left:last-child {
   width: 332px;
+  vertical-align: top;
+}
+
+#main-ytn h3,
+#main-newsstand h3 {
+  font-size: 14px;
+  font-family: NanumSquare, Dotum, "µ¸¿ò", Helvetica, AppleSDGothicNeo,
+    sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
   vertical-align: top;
 }
 
@@ -456,6 +467,7 @@ main {
 #main-shopping iframe {
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 #main-third-block,
@@ -507,6 +519,7 @@ main {
   white-space: nowrap;
   overflow: hidden;
   height: 45px;
+  width: 700px;
 }
 
 #subject-list li {
