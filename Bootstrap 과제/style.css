@@ -6,3 +6,17 @@
 #highlights {
   height: 500px;
 }
+
+header a:hover {
+  color: white !important;
+}
+
+header button:hover {
+  color: white !important;
+  background-color: #0dcaf0;
+}
+
+header button {
+  position: fixed;
+  right: 70px;
+}
