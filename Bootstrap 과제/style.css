@@ -11,15 +11,6 @@ ul {
   height: 500px;
 }
 
-header a:hover {
-  color: white !important;
-}
-
-header button:hover {
-  color: white !important;
-  background-color: #0dcaf0;
-}
-
 #contact textarea {
   height: 200px;
 }

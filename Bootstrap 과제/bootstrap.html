@@ -13,28 +13,35 @@
 </head>
 
 <body>
-	<header class="container-fluid sticky-top py-2 bg-dark text-secondary">
-		<ul class="nav">
-			<a class="navbar-brand text-white" href="#">Pirogramming</a>
-			<a class="nav-link text-info px-5" href="#">KimGaeun</a>
-			<li class="nav-item">
-				<a class="nav-link text-white" href="#intro">Intro</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#highlights">Highlights</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#gallery">Gallery</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#contact">Contact</a>
-			</li>
-
-			<!-- Button trigger modal -->
-			<button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
-				data-bs-target="#exampleModal">About</button>
-		</ul>
-	</header>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#">Pirogramming</a>
+			<a class="nav-link text-info px-4" href="#">Gaeun Kim</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#intro">Intro</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#highlights">Highlights</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#gallery">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-outline-info me-3" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">About</button>
+			</div>
+		</div>
+	</nav>
 
 	<main>
 		<section id="start-section"
@@ -100,7 +107,6 @@
 			<h3 class="text-primary fw-bold">Get in Touch</h3>
 			<hr />
 			<p>We love feedback. Fill out the form below and we'll get back to you as soon as posibble</p>
-
 			<div class="container">
 				<div class="row mb-2">
 					<div class="col-md-12 col-lg-4 mb-2">
@@ -113,14 +119,12 @@
 						<input class="form-control" type="tel" placeholder="Phone">
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-12 mb-2">
 						<textarea class="form-control" type="text" placeholder="Your message here.."></textarea>
 					</div>
 				</div>
 			</div>
-
 			<!-- Button trigger modal -->
 			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Send</button>
 		</section>
@@ -176,7 +180,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="./bootstrap-download/js/bootstrap.min.js"></script>
