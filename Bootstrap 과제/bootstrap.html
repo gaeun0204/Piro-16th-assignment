@@ -13,29 +13,31 @@
 </head>
 
 <body>
-	<header class="bg-dark text-white">
+	<header class="sticky-top py-2 bg-dark text-secondary">
 		<ul class="nav">
-			<a class="nav-link" href="#">Pirogramming</a>
-			<a class="nav-link px-5" href="#">KimGaeun</a>
+			<a class="nav-link text-white" href="#">Pirogramming</a>
+			<a class="nav-link text-info px-5" href="#">KimGaeun</a>
 			<li class="nav-item">
 				<a class="nav-link text-white" href="#intro">Intro</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-white" href="#highlights">Highlights</a>
+				<a class="nav-link" href="#highlights">Highlights</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-white" href="#gallery">Gallery</a>
+				<a class="nav-link" href="#gallery">Gallery</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link text-white" href="#contact">Contact</a>
+				<a class="nav-link" href="#contact">Contact</a>
 			</li>
 
-			<button type="button" class="btn border text-info border-info">About</button>
+			<button type="button" class="btn border text-info border-info" data-bs-toggle="modal"
+				data-bs-target="#exampleModal">About</button>
 		</ul>
 	</header>
 
 	<main>
-		<section id="start-section" class="d-flex flex-column justify-content-center align-items-center text-center">
+		<section id="start-section"
+			class="bg-white d-flex flex-column justify-content-center align-items-center text-center">
 			<h1>Pirogramming 16</h1>
 			<h3>Cheer Up</h3>
 			<hr class="w-75" />
@@ -51,23 +53,25 @@
 		<section id="highlights" class="bg-dark text-white d-flex flex-row justify-content-around align-items-center">
 			<div class="container">
 				<div class="row text-center">
-					<!-- col-12 col-md-6 col-lg-4 col-xl-3 -->
 					<div class="col-md-12 col-lg-4">
-						Reponsive
+						<h3>Reponsive</h3>
+						피로그래밍 화이팅
 					</div>
 					<div class="col-md-12 col-lg-4">
-						Costomizable
+						<h3>Costomizable</h3>
+						16기
 					</div>
 					<div class="col-md-12 col-lg-4">
-						Consistent
+						<h3>Consistent</h3>
+						힘내자!
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="gallery">
+		<section id="gallery" class="bg-dark">
 			<div class="container">
-				<div class="row m-5">
+				<div class="row p-5">
 					<div class="col-md-6 col-lg-4">
 						<img class="img-fluid h-100" src="./펭수1.png" alt="">
 					</div>
@@ -90,14 +94,59 @@
 			</div>
 		</section>
 
-		<section id="contact">
-			contact
+		<section id="contact" class="btn-secondary text-center p-3">
+			<h2>Get in Touch</h2>
+			<hr />
+			<p>We love feedback. Fill out the form</p>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-lg-4">
+						<input type="text" placeholder="Name">
+					</div>
+					<div class="col-md-12 col-lg-4">
+						<input type="email" placeholder="Email">
+					</div>
+					<div class="col-md-12 col-lg-4">
+						<input type="tel" placeholder="Phone">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<textarea type="text" placeholder="Your message here.."></textarea>
+					</div>
+				</div>
+			</div>
+
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Send</button>
 		</section>
 	</main>
 
 	<footer>
 		<h3>footer</h3>
 	</footer>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal">
+		<div class="modal-dialog">
+			<div class="modal-content text-center d-flex flex-column align-items-center">
+				<div class="modal-header">
+					<h5 class="modal-title">Nice job!</h5>
+					<button type="button" data-bs-dismiss="modal"></button>
+				</div>
+				<div class="modal-body">
+					You clicked the button, but it doesn't actually go anywhere.<br />
+					Learn more at Bootstrap
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="./bootstrap-download/js/bootstrap.min.js"></script>

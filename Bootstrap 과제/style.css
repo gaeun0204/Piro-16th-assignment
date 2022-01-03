@@ -1,5 +1,8 @@
-section {
-  height: 700px;
-  background-color: lemonchiffon;
-  border: 2px solid lightgray;
+#start-section,
+#intro {
+  height: 600px;
+}
+
+#highlights {
+  height: 500px;
 }
