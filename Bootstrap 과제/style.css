@@ -1,3 +1,7 @@
+ul {
+  padding: 0;
+}
+
 #start-section,
 #intro {
   height: 600px;
@@ -16,7 +20,10 @@ header button:hover {
   background-color: #0dcaf0;
 }
 
-header button {
-  position: fixed;
-  right: 70px;
+#contact textarea {
+  height: 200px;
+}
+
+#contact button {
+  width: 260px;
 }
