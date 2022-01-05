@@ -15,22 +15,24 @@ def InputCount():
         except InputRangeError as e:
             print(e)
 
-num = 0
+num = 20
 
 while num < 31:
     InputCount() # playerA 입력
     for i in range(cnt):
-        if num >= 31:
-            break;
         num += 1
         print('playerA :', num)
+        if num >= 31:
+            print('playerB win!')
+            break;
 
     if num >= 31: # 예외처리: 종료조건
         break;
 
     InputCount() # playerB 입력
     for i in range(cnt):
-        if num >= 31:
-            break;
         num += 1
         print('playerB :', num)
+        if num >= 31:
+            print('playerA win!')
+            break;
