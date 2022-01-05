@@ -2,10 +2,14 @@ class InputRangeError(Exception):
     def __init__(self):
         super().__init__('1,2,3 중 하나를 입력하세요')
 
-def InputCount():
+def brGame(who):
+    global num
+    global player
+
+    player = who # 현재 순서인 player 저장
+
     while 1:
         try:
-            global cnt
             cnt = int(input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :'))
             if (cnt < 1 or cnt >= 4):
                 raise InputRangeError
@@ -15,24 +19,26 @@ def InputCount():
         except InputRangeError as e:
             print(e)
 
+    for i in range(cnt):
+        num += 1
+        print('player{0} : {1}'.format(player, num))
+        if num >= 31:
+            break;
+
+
+global num
 num = 0
+global player
 
 while num < 31:
-    InputCount() # playerA 입력
-    for i in range(cnt):
-        num += 1
-        print('playerA :', num)
-        if num >= 31:
-            print('playerB win!')
-            break;
+    brGame('A')
 
-    if num >= 31: # 예외처리: 종료조건
+    if num >= 31:
         break;
 
-    InputCount() # playerB 입력
-    for i in range(cnt):
-        num += 1
-        print('playerB :', num)
-        if num >= 31:
-            print('playerA win!')
-            break;
+    brGame('B')
+
+if player == 'A':
+    print('playerB win!')
+else:
+    print('playerA win!')
