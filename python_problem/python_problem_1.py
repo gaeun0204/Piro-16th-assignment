@@ -17,12 +17,20 @@ def InputCount():
 
 num = 0
 
-InputCount() # playerA 입력
-for i in range(cnt):
-    num += 1
-    print('playerA :', num)
+while num < 31:
+    InputCount() # playerA 입력
+    for i in range(cnt):
+        if num >= 31:
+            break;
+        num += 1
+        print('playerA :', num)
 
-InputCount() # playerB 입력
-for i in range(cnt):
-    num += 1
-    print('playerB :', num)
+    if num >= 31: # 예외처리: 종료조건
+        break;
+
+    InputCount() # playerB 입력
+    for i in range(cnt):
+        if num >= 31:
+            break;
+        num += 1
+        print('playerB :', num)
