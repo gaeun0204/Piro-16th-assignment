@@ -15,7 +15,7 @@ def InputCount():
         except InputRangeError as e:
             print(e)
 
-num = 20
+num = 0
 
 while num < 31:
     InputCount() # playerA 입력
