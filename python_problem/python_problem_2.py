@@ -49,6 +49,7 @@ def Menu4(delname):
     for i in range(len(studentsInfo)):
         if studentsInfo[i].name == delname:
             del studentsInfo[i]
+            break # 반드시 써줘야 함! 삭제 후에 len(studentsInfo)의 값이 달라지므로 그대로 두면 'list index out of range' 에러 발생.
 
 
 #학생 정보를 저장할 변수 초기화
@@ -67,6 +68,7 @@ while True :
         #학생 정보 입력받기
         #예외사항 처리(데이터 입력 갯수, 이미 존재하는 이름, 입력 점수 값이 양의 정수인지)
         #예외사항이 아닌 입력인 경우 1번 함수 호출
+
         try:
             data = input('Enter name mid-score final-score : ').split() # 입력데이터 리스트에 저장
 
