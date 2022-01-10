@@ -39,6 +39,7 @@ input[type="checkbox"] {
 #add-btn {
   background-color: cornsilk;
   width: 15px;
+  height: auto;
   border-radius: 10px;
   color: #e7a1b6;
 }
