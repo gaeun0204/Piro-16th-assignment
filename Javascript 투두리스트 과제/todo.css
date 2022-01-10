@@ -1,0 +1,57 @@
+@import "./reset.css";
+
+@font-face {
+  font-family: "ImcreSoojin";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(100deg, #e7a1b6, #ebd0d0);
+  color: white;
+  font-family: "ImcreSoojin";
+  font-size: 0.3em;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  zoom: 3;
+}
+
+input {
+  border-radius: 3px;
+  border: 0px;
+  font-family: "ImcreSoojin";
+  font-size: 0.3em;
+  padding: 3px;
+}
+
+input[type="checkbox"] {
+  margin-right: 7px !important;
+}
+
+#add-btn {
+  background-color: cornsilk;
+  width: 15px;
+  border-radius: 10px;
+  color: #e7a1b6;
+}
+
+button {
+  background-color: cornsilk;
+  color: #e7a1b6;
+  border-radius: 3px;
+  padding: 3px;
+  font-family: "ImcreSoojin";
+  font-size: 0.3em;
+}
+
+ul {
+  padding-left: 3px;
+}
