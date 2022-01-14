@@ -1,13 +1,13 @@
 from django.db import models
 
 class Review(models.Model):
-	title = model.CharField(verbose_name='Á¦¸ñ', max_length=50)
-	director = models.CharField(verbose_name='°¨µ¶', max_length=20)
-	actor = models.CharField(verbose_name='ÁÖ¿¬', max_length=50)
-	genre = models.CharField(verbose_name='Àå¸£', max_length=20)
-	rating  = models.FloatField(verbose_name='º°Á¡')
-	runningTime = models.DurationField(verbose_name='·¯´×Å¸ÀÓ')
-	content = models.TextField(verbose_name='¸®ºä³»¿ë')
+	title = models.CharField(verbose_name='ì œëª©', max_length=50)
+	director = models.CharField(verbose_name='ê°ë…', max_length=20)
+	actor = models.CharField(verbose_name='ì£¼ì—°', max_length=50)
+	genre = models.CharField(verbose_name='ì¥ë¥´', max_length=20)
+	rating  = models.FloatField(verbose_name='ë³„ì ')
+	runningTime = models.IntegerField(verbose_name='ëŸ¬ë‹íƒ€ì„')
+	content = models.TextField(verbose_name='ë¦¬ë·°ë‚´ìš©')
 
 	def __str__(self):
 		return self.title
