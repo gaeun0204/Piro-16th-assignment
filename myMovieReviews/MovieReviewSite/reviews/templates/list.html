@@ -17,9 +17,7 @@
 		<h4>개봉년도 {{review.releaseYear}}</h4>
 		<h4>장르 {{review.genre}}</h4>
 		<h4>별점 {{review.rating}}</h4>
-		<a href="">
-			<button>리뷰작성</button>
-		</a>
+		<a href="{% url 'reviews:create' %}">리뷰작성</a>
 	</div>
 	{% endfor %}
 </body>

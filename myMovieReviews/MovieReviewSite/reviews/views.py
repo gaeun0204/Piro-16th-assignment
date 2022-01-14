@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Review
 from .forms import ReviewForm
 
@@ -20,5 +20,18 @@ def review_create(request):
 			return redirect('reviews:list')
 	else:
 		form = ReviewForm() 
+		ctx = {'form' : form}
+		return render(request, template_name = 'review_form.html', context = ctx)
+
+def review_update(request, pk):
+	review = get_object_or_404(Review, id=pk)
+
+	if request.method == 'POST':
+		form = ReviewForm(request.POST, instance = review)
+		if form.is_valid():
+			review = form.save()
+			return redirect('reviews:detail', pk)
+	else :
+		form = ReviewForm(instance = review)
 		ctx = {'form' : form}
 		return render(request, template_name = 'review_form.html', context = ctx)

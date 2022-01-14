@@ -21,7 +21,7 @@
 		<h4>러닝타임 {{review.runningTime}}</h4>
 		<p>{{review.content}}</p>
 		<br />
-		<a href="">수정</a>
+		<a href="{% url 'reviews:update' review.id %}">수정</a>
 		<a href="">삭제</a>
 	</div>
 </body>
