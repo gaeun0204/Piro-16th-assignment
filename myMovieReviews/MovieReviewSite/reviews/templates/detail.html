@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>리뷰 상세</title>
+</head>
+
+<body>
+	<div>
+		<a href="{% url 'reviews:list' %}">my Movie reviews</a> <br />
+		<hr>
+		<h2>{{review.title}}</h2>
+		<h4>감독 {{review.director}}</h4>
+		<h4>주연 {{review.actor}}</h4>
+		<h4>장르 {{review.genre}}</h4>
+		<h4>별점 {{review.rating}}</h4>
+		<h4>러닝타임 {{review.runningTime}}</h4>
+		<p>{{review.content}}</p>
+		<br />
+		<a href="">수정</a>
+		<a href="">삭제</a>
+	</div>
+</body>
+
+</html>
