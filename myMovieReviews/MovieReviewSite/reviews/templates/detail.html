@@ -22,7 +22,7 @@
 		<p>{{review.content}}</p>
 		<br />
 		<a href="{% url 'reviews:update' review.id %}">수정</a>
-		<a href="">삭제</a>
+		<a href="{% url 'reviews:delete' review.id %}">삭제</a>
 	</div>
 </body>
 

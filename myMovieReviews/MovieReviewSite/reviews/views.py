@@ -35,3 +35,8 @@ def review_update(request, pk):
 		form = ReviewForm(instance = review)
 		ctx = {'form' : form}
 		return render(request, template_name = 'review_form.html', context = ctx)
+
+def review_delete(request, pk):
+    review = get_object_or_404(Review, id=pk)
+    review.delete()
+    return redirect('reviews:list')
