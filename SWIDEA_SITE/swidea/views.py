@@ -41,3 +41,20 @@ def idea_delete(request, pk):
     idea = get_object_or_404(Idea, id=pk)
     idea.delete()
     return redirect('swidea:idea_list')
+
+
+def devtool_list(request):
+	devtools = Devtool.objects.all()
+	ctx = {'devtools' : devtools}
+	return render(request, template_name = 'devtool_list.html', context = ctx)
+
+# def devtool_create(request):
+# 	if request.method == 'POST':
+# 		form = DevtoolForm(request.POST) 
+# 		if form.is_valid():
+# 			form = form.save()
+# 			return redirect('swidea:dev_list')
+# 	else:
+# 		form = DevtoolForm() 
+# 		ctx = {'form' : form}
+# 		return render(request, template_name = 'devtool_register.html', context = ctx)

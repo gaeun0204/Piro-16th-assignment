@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>DevTool List</h2>
+<p>데크툴 목록 페이지</p>
+<br />
+
+<div class="devtools">
+	{% for devtool in devtools %}
+	{{devtool.name}}
+	<hr>
+	{{devtool.kind}}
+	<br />
+	{{devtool.description}}
+
+	<br />
+	<br />
+	{% endfor%}
+</div>
+
+{% endblock %}
