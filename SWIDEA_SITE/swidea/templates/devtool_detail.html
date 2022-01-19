@@ -12,7 +12,8 @@
 <h4>만들 수 있는 SW 목록</h4>
 
 {% for idea in ideas %}
-{{ idea.title }}
+<a href="{% url 'swidea:idea_detail' idea.id%}">{{ idea.title }}</a>
+
 <br />
 {% endfor %}
 <br />
