@@ -3,35 +3,35 @@ from .models import *
 from .forms import *
 
 # Create your views here.
-def swidea_list(request):
+def idea_list(request):
 	ideas = Idea.objects.all()
 	ctx = {'ideas' : ideas}
 	return render(request, template_name = 'list.html', context = ctx)
 
-def swidea_detail(request, pk):
+def idea_detail(request, pk):
 	idea = Idea.objects.get(id=pk)
 	ctx = {'idea' : idea}
 	return render(request, template_name = 'detail.html', context = ctx)
 
-def swidea_create(request):
+def idea_create(request):
 	if request.method == 'POST':
 		form = IdeaForm(request.POST) 
 		if form.is_valid():
 			form = form.save()
-			return redirect('swidea:list')
+			return redirect('swidea:idea_list')
 	else:
 		form = IdeaForm() 
 		ctx = {'form' : form}
 		return render(request, template_name = 'idea_form_register.html', context = ctx)
 
-def swidea_update(request, pk):
+def idea_update(request, pk):
 	idea = get_object_or_404(Idea, id=pk)
 
 	if request.method == 'POST':
 		form = IdeaForm(request.POST, instance = idea) #
 		if form.is_valid():
 			idea = form.save()
-			return redirect('swidea:detail', pk)
+			return redirect('swidea:idea_detail', pk)
 	else :
 		form = IdeaForm(instance = idea)
 		ctx = {'form' : form}
