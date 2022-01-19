@@ -13,5 +13,6 @@ urlpatterns = [
 	path('devtool', view = views.devtool_list, name = 'devtool_list'),
 	path('devtool/create/', view = views.devtool_create, name = 'devtool_create'),
 	path('devtool/<int:pk>/', view = views.devtool_detail, name = 'devtool_detail'),
+	path('devtool/<int:pk>/update', view = views.devtool_update, name = 'devtool_update'),
 
 ]

@@ -28,7 +28,7 @@ def idea_update(request, pk):
 	idea = get_object_or_404(Idea, id=pk)
 
 	if request.method == 'POST':
-		form = IdeaForm(request.POST, instance = idea) #
+		form = IdeaForm(request.POST, instance = idea)
 		if form.is_valid():
 			idea = form.save()
 			return redirect('swidea:idea_detail', pk)
@@ -66,3 +66,16 @@ def devtool_detail(request, pk):
 
 	ctx = {'devtool' : devtool, 'ideas' : ideas}
 	return render(request, template_name = 'devtool_detail.html', context = ctx)
+
+def devtool_update(request, pk):
+	devtool = get_object_or_404(Devtool, id=pk)
+
+	if request.method == 'POST':
+		form = DevtoolForm(request.POST, instance = devtool)
+		if form.is_valid():
+			devtool = form.save()
+			return redirect('swidea:devtool_detail', pk)
+	else :
+		form = DevtoolForm(instance = devtool)
+		ctx = {'form' : form}
+		return render(request, template_name = 'devtool_update.html', context = ctx)
