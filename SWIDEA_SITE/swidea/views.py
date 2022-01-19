@@ -18,7 +18,7 @@ def idea_create(request):
 		form = IdeaForm(request.POST) 
 		if form.is_valid():
 			form = form.save()
-			return redirect('swidea:idea_list')
+			return redirect('swidea:idea_detail', pk=form.pk)
 	else:
 		form = IdeaForm() 
 		ctx = {'form' : form}
@@ -53,7 +53,7 @@ def devtool_create(request):
 		form = DevtoolForm(request.POST) 
 		if form.is_valid():
 			form = form.save()
-			return redirect('swidea:devtool_list')
+			return redirect('swidea:devtool_detail', pk=form.pk)
 	else:
 		form = DevtoolForm() 
 		ctx = {'form' : form}
@@ -80,3 +80,8 @@ def devtool_update(request, pk):
 		form = DevtoolForm(instance = devtool)
 		ctx = {'form' : form}
 		return render(request, template_name = 'devtool_update.html', context = ctx)
+
+def devtool_delete(request, pk):
+    devtool = get_object_or_404(Devtool, id=pk)
+    devtool.delete()
+    return redirect('swidea:devtool_list')

@@ -19,7 +19,7 @@
 <br />
 <br />
 
-<button type="button" class="btn btn-danger">삭제</button>
+<button type="button" class="btn btn-danger"><a href="{% url 'swidea:devtool_delete' devtool.id %}">삭제</a></button>
 <button type="button" class="btn btn-primary"><a href="{% url 'swidea:devtool_list' %}">목록</a></button>
 <button type="button" class="btn btn-info"><a href="{% url 'swidea:devtool_update' devtool.id %}">수정</a></button>
 
