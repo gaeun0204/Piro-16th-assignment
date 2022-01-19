@@ -74,6 +74,7 @@ def devtool_update(request, pk):
 		form = DevtoolForm(request.POST, instance = devtool)
 		if form.is_valid():
 			devtool = form.save()
+			print('pk:', pk)
 			return redirect('swidea:devtool_detail', pk)
 	else :
 		form = DevtoolForm(instance = devtool)
