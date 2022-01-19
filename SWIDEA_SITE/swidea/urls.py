@@ -11,4 +11,6 @@ urlpatterns = [
 	path('<int:pk>/delete', view = views.idea_delete, name = 'idea_delete'),
 
 	path('devtool', view = views.devtool_list, name = 'devtool_list'),
+	path('devtool/create/', view = views.devtool_create, name = 'devtool_create'),
+
 ]

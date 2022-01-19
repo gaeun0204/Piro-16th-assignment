@@ -48,13 +48,13 @@ def devtool_list(request):
 	ctx = {'devtools' : devtools}
 	return render(request, template_name = 'devtool_list.html', context = ctx)
 
-# def devtool_create(request):
-# 	if request.method == 'POST':
-# 		form = DevtoolForm(request.POST) 
-# 		if form.is_valid():
-# 			form = form.save()
-# 			return redirect('swidea:dev_list')
-# 	else:
-# 		form = DevtoolForm() 
-# 		ctx = {'form' : form}
-# 		return render(request, template_name = 'devtool_register.html', context = ctx)
+def devtool_create(request):
+	if request.method == 'POST':
+		form = DevtoolForm(request.POST) 
+		if form.is_valid():
+			form = form.save()
+			return redirect('swidea:devtool_list')
+	else:
+		form = DevtoolForm() 
+		ctx = {'form' : form}
+		return render(request, template_name = 'devtool_register.html', context = ctx)
