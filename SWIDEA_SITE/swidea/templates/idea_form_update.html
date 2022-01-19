@@ -4,7 +4,7 @@
 <h1>Idea Detail Update</h1>
 <p>아이디어 세부수정 페이지</p>
 <hr />
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
 	{% csrf_token %}
 	<table>
 		{{ form.as_table }}

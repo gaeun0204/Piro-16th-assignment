@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import *
 
-# Create your views here.
 def idea_list(request):
 	ideas = Idea.objects.all()
 	ctx = {'ideas' : ideas}
@@ -15,10 +14,9 @@ def idea_detail(request, pk):
 	ctx = {'idea' : idea, 'devtool' : devtool}
 	return render(request, template_name = 'detail.html', context = ctx)
 
-
 def idea_create(request):
 	if request.method == 'POST':
-		form = IdeaForm(request.POST) 
+		form = IdeaForm(request.POST, request.FILES) 
 		if form.is_valid():
 			form = form.save()
 			return redirect('swidea:idea_detail', pk=form.pk)
@@ -31,7 +29,7 @@ def idea_update(request, pk):
 	idea = get_object_or_404(Idea, id=pk)
 
 	if request.method == 'POST':
-		form = IdeaForm(request.POST, instance = idea)
+		form = IdeaForm(request.POST, request.FILES, instance = idea)
 		if form.is_valid():
 			idea = form.save()
 			return redirect('swidea:idea_detail', pk)
