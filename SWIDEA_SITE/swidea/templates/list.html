@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for idea in ideas %}
-<h2>{{idea.title}}</h2>
-<h4>{{idea.content}}</h4>
-{% endfor%}
+<h1>Idea List</h1>
+<p>나의 아이디어를 기록</p>
+<br />
+
+<div class="ideas">
+	{% for idea in ideas %}
+	<h2>{{idea.title}}</h2>
+	<hr>
+	<h4>예상 개발 툴 : {{idea.devtool}}</h4>
+	<h4>아이디어 관심도: {{idea.interest}}</h4>
+	<button>+</button>
+	<button>-</button>
+	<br />
+	<br />
+	{% endfor%}
+</div>
+
 {% endblock %}

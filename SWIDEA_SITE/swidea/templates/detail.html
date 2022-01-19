@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1>Idea Detail</h1>
+
 <h2>{{idea.title}}</h2>
-<h4>{{idea.content}}</h4>
-<p>아이디어 디테일 페이지입니다</p>
-{% endfor%}
+
+<h4>1) 아이디어 관심도:</h4>
+{{idea.interest}}
+<h4>2) 예상 개발 툴:</h4>
+{{idea.devtool}}
+<h4>3) 아이디어 설명:</h4>
+{{idea.content}}
+
 {% endblock %}
