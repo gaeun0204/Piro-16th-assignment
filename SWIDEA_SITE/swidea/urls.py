@@ -8,4 +8,5 @@ urlpatterns = [
 	path('<int:pk>/', views.idea_detail, name = 'idea_detail'),
 	path('create/', view = views.idea_create, name = 'idea_create'),
 	path('<int:pk>/update', view = views.idea_update, name = 'idea_update'),
+	path('<int:pk>/delete', view = views.idea_delete, name = 'idea_delete'),
 ]

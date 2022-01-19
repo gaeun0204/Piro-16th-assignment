@@ -36,3 +36,8 @@ def idea_update(request, pk):
 		form = IdeaForm(instance = idea)
 		ctx = {'form' : form}
 		return render(request, template_name = 'idea_form_update.html', context = ctx)
+
+def idea_delete(request, pk):
+    idea = get_object_or_404(Idea, id=pk)
+    idea.delete()
+    return redirect('swidea:idea_list')

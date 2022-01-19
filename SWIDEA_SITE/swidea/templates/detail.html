@@ -20,9 +20,8 @@
 <br />
 <br />
 
-<button type="button" class="btn btn-danger">삭제</button>
-<button type="button" class="btn btn-primary">목록</button>
-<button type="button" class="btn btn-info">수정</button>
-
+<button type="button" class="btn btn-danger"><a href="{% url 'swidea:idea_delete' idea.id %}">삭제</a></button>
+<button type="button" class="btn btn-primary"><a href="{% url 'swidea:idea_list' %}">목록</a></button>
+<button type="button" class="btn btn-info"><a href="{% url 'swidea:idea_update' idea.id %}">수정</a></button>
 
 {% endblock %}
