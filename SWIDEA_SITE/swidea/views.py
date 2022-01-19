@@ -58,3 +58,8 @@ def devtool_create(request):
 		form = DevtoolForm() 
 		ctx = {'form' : form}
 		return render(request, template_name = 'devtool_register.html', context = ctx)
+
+def devtool_detail(request, pk):
+	devtool = Devtool.objects.get(id=pk)
+	ctx = {'devtool' : devtool}
+	return render(request, template_name = 'devtool_detail.html', context = ctx)

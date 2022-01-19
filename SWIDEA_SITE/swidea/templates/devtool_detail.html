@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>DevTool Detail</h1>
+<p>개발자툴 디테일 페이지</p>
+
+<h2>{{devtool.name}}</h2>
+<h4>{{devtool.kind}}</h4>
+<h4>{{devtool.description}}</h4>
+<br />
+<br />
+
+<button type="button" class="btn btn-danger">삭제</button>
+<button type="button" class="btn btn-primary">목록</button>
+<button type="button" class="btn btn-info">수정</button>
+
+{% endblock %}

@@ -7,7 +7,7 @@
 
 <div class="devtools">
 	{% for devtool in devtools %}
-	{{devtool.name}}
+	<h2><a href="{% url 'swidea:devtool_detail' devtool.id %}">{{devtool.name}}</a></h2>
 	<hr>
 	{{devtool.kind}}
 	<br />
