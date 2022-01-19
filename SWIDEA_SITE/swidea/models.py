@@ -14,7 +14,7 @@ class Idea(models.Model):
 	content = models.TextField(verbose_name='아이디어설명')
 	interest = models.IntegerField(verbose_name='아이디어관심도')
 	# 개발툴 리스트 중에서 항목선택
-	devtool = models.ForeignKey(Devtool, on_delete=models.CASCADE)
+	devtool = models.ForeignKey(Devtool, on_delete=models.CASCADE, verbose_name='예상개발툴')
 	
 	def __str__(self):
 		return self.title
