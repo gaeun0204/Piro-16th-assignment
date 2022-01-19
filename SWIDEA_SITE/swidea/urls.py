@@ -7,4 +7,5 @@ urlpatterns = [
 	path('', views.swidea_list, name = 'list'), # 앱 swidea의 urls 파일과 연결
 	path('<int:pk>/', views.swidea_detail, name = 'detail'),
 	path('create/', view = views.swidea_create, name = 'create'),
+	path('<int:pk>/update', view = views.swidea_update, name = 'update'),
 ]

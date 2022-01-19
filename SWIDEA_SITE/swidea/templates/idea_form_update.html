@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Idea Detail Update</h1>
+<p>아이디어 세부수정 페이지</p>
+<hr />
+<form action="" method="POST">
+	{% csrf_token %}
+	<table>
+		{{ form.as_table }}
+	</table>
+	<input type="submit" value="Submit" class="submit_review" />
+</form>
+
+{% endblock %}

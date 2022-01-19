@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import *
 
@@ -22,4 +22,17 @@ def swidea_create(request):
 	else:
 		form = IdeaForm() 
 		ctx = {'form' : form}
-		return render(request, template_name = 'idea_form.html', context = ctx)
+		return render(request, template_name = 'idea_form_register.html', context = ctx)
+
+def swidea_update(request, pk):
+	idea = get_object_or_404(Idea, id=pk)
+
+	if request.method == 'POST':
+		form = IdeaForm(request.POST, instance = idea) #
+		if form.is_valid():
+			idea = form.save()
+			return redirect('swidea:detail', pk)
+	else :
+		form = IdeaForm(instance = idea)
+		ctx = {'form' : form}
+		return render(request, template_name = 'idea_form_update.html', context = ctx)
