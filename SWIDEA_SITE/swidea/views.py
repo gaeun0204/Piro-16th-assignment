@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.http import JsonResponse
 from .models import *
 from .forms import *
 
@@ -6,6 +7,25 @@ def idea_list(request):
 	ideas = Idea.objects.all()
 	ctx = {'ideas' : ideas}
 	return render(request, template_name = 'list.html', context = ctx)
+
+
+def plus_interest(request):
+    pk = request.POST.get('pk', None)
+    idea = get_object_or_404(Idea, pk=pk)
+    idea.interest += 1
+    idea.save()
+    context = {'plus_interest': idea.interest}
+    return JsonResponse(context)
+
+def minus_interest(request):
+    pk = request.POST.get('pk', None)
+    idea = get_object_or_404(Idea, pk=pk)
+    idea.interest -= 1
+    idea.save()
+    context = {'minus_interest': idea.interest}
+    return JsonResponse(context)
+
+
 
 def idea_detail(request, pk):
 	idea = Idea.objects.get(id=pk)

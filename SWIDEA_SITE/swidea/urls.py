@@ -5,6 +5,9 @@ app_name = "swidea"
 
 urlpatterns = [
 	path('', views.idea_list, name = 'idea_list'), # 앱 swidea의 urls 파일과 연결
+	path('plus_interest/', views.plus_interest, name="plus_interest"),
+    path('minus_interest/', views.minus_interest, name="minus_interest"),
+	
 	path('<int:pk>/', views.idea_detail, name = 'idea_detail'),
 	path('create/', view = views.idea_create, name = 'idea_create'),
 	path('<int:pk>/update', view = views.idea_update, name = 'idea_update'),
