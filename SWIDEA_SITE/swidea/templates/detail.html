@@ -14,7 +14,8 @@
 <h4>1) 아이디어 관심도:</h4>
 {{idea.interest}}
 <h4>2) 예상 개발 툴:</h4>
-{{idea.devtool}}
+<a href="{% url 'swidea:devtool_detail' devtool.id%}">{{idea.devtool}}</a>
+
 <h4>3) 아이디어 설명:</h4>
 {{idea.content}}
 <br />

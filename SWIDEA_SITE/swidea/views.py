@@ -10,8 +10,11 @@ def idea_list(request):
 
 def idea_detail(request, pk):
 	idea = Idea.objects.get(id=pk)
-	ctx = {'idea' : idea}
+	devtool = idea.devtool # 외래키로 지정한 Devtool 가져옴
+
+	ctx = {'idea' : idea, 'devtool' : devtool}
 	return render(request, template_name = 'detail.html', context = ctx)
+
 
 def idea_create(request):
 	if request.method == 'POST':
