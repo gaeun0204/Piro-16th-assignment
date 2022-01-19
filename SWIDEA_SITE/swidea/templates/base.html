@@ -16,11 +16,12 @@
 
 <body>
 	<nav class="menu">
-		<a href="">My SW Idea Manage</a>
-		<a href="">아이디어 등록</a>
-		<a href="">아이디어 관리</a>
-		<a href="">개발툴 등록</a>
-		<a href="">개발툴 관리</a>
+		<a href="{% url 'swidea:idea_list' %}">My SW Idea Manage</a>
+
+		<a href="{% url 'swidea:idea_create' %}">아이디어 등록</a>
+		<a href="{% url 'swidea:idea_list' %}">아이디어 관리</a>
+		<a href="{% url 'swidea:devtool_create' %}">개발툴 등록</a>
+		<a href="{% url 'swidea:devtool_list' %}">개발툴 관리</a>
 	</nav>
 	<br />
 

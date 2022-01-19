@@ -8,6 +8,12 @@
 <h2>{{devtool.name}}</h2>
 <h4>{{devtool.kind}}</h4>
 <h4>{{devtool.description}}</h4>
+<hr>
+<h4>만들 수 있는 SW 목록</h4>
+
+{% for idea in ideas %}
+{{ idea.name }}
+{% endfor %}
 <br />
 <br />
 

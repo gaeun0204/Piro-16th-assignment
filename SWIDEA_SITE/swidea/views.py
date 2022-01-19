@@ -61,5 +61,8 @@ def devtool_create(request):
 
 def devtool_detail(request, pk):
 	devtool = Devtool.objects.get(id=pk)
-	ctx = {'devtool' : devtool}
+	ideas = Idea.objects.filter(devtool=pk)
+	# devool detail 페이지와 동일한 pk를 가진것들을 Idea객체 중에 찾아서 반환
+
+	ctx = {'devtool' : devtool, 'ideas' : ideas}
 	return render(request, template_name = 'devtool_detail.html', context = ctx)
