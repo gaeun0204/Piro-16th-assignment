@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css-reset.css' %}">
+	<title>SWIDEA</title>
+</head>
+
+<body>
+	<nav class="menu">
+		<a href="">My SW Idea Manage</a>
+		<a href="">아이디어 등록</a>
+		<a href="">아이디어 관리</a>
+		<a href="">개발툴 등록</a>
+		<a href="">개발툴 관리</a>
+
+	</nav>
+	<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+	{% block content %}
+	{% endblock %}
+	<!-- 기본 템플릿 안에 삽입될 내용 End -->
+</body>
+
+</html>
