@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Ajax 실습</title>
+</head>
+
+<body>
+	<nav><a href="{% url 'main:create' %}">새 글 작성</a></nav>
+	<br />
+
+	{% for post in posts %}
+	<div>
+		<h2>{{post.title}}</h2>
+		{{post.content}}
+		<button onclick="clickLike({{ post.id }})">좋아요</button>
+	</div>
+	{% endfor %}
+
+	<script>
+		const requestLike = new XMLHttpRequest();
+
+		const clickLike = (id) => {
+			const url = "/like/";
+			requestLike.open("POST", url, true);
+			requestLike.setRequestHeader(
+				"Content-Type",
+				"application/x-www-form-urlencoded"
+			);
+			requestLike.send(JSON.stringify({ id: id }));
+		};
+
+		const handleLikeResponse = () => {
+			if (requestLike.status < 400) { // 에러가 아닌 경우
+				const id = JSON.parse(requestLike.response); // Json.parse - 기존 JSON 형태를 자바스크립트에 쓸수있는 형태로 변환
+				const element = document.querySelector(`.post-id-${id}`);
+
+				element.innerHTML = "좋아요 누름"
+			}
+		};
+
+		// requeststate 바뀔 때마다 자동으로 onreadystatechange 함수 호출
+		requestLike.onreadystatechange = () => {
+			if (requestLike.readyState === XMLHttpRequest.DONE) {
+				handleLikeResponse();
+			}
+		};
+	</script>
+</body>
+
+</html>
